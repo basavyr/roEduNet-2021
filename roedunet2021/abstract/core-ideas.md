@@ -26,4 +26,4 @@ The computing resources at DFCTI need to be up and running at all times, assurin
 
 The large-scale simulations and calculations requested by the physicists within the department require great amount of compute power, and they also demand a high degree of scalability.
 
-Assuring thus a great workflow must be a crucial objective. This can be expressed with the help of a monitoring team that always checks for potential issues with the computing resources (i.e., unusual behavior of the CPUs, failure of the memory, high disk usage).
+Assuring thus a great workflow must be a crucial objective. This can be expressed with the help of a monitoring team that always checks for potential issues with the computing resources (i.e., unusual behavior of the CPU's, failure of the memory, high disk usage).
