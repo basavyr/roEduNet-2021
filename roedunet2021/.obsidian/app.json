@@ -1,1 +1,8 @@
-{}
+{
+  "spellcheck": true,
+  "foldHeading": true,
+  "foldIndent": true,
+  "showLineNumber": true,
+  "attachmentFolderPath": "assets",
+  "promptDelete": false
+}
