@@ -7,8 +7,11 @@
         "id": "4219dfe279cf5bb3",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "abstract/core-ideas.md",
+            "mode": "source"
+          }
         }
       }
     ],
@@ -73,6 +76,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "abstract/core-ideas.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,6 +93,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "abstract/core-ideas.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -110,7 +115,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "abstract/core-ideas.md"
+              }
             }
           }
         ]
@@ -121,5 +128,7 @@
     "collapsed": true
   },
   "active": "4219dfe279cf5bb3",
-  "lastOpenFiles": []
+  "lastOpenFiles": [
+    "abstract/Untitled.md"
+  ]
 }
