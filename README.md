@@ -10,3 +10,5 @@ The 20th edition of Agency ARNIEC/RoEduNet's (Romanian Education Network) annual
 > ⏱ Starts 4 Nov 2021, 12:00
 > 
 > ⏱ Ends 6 Nov 2021, 14:00
+
+[Core ideas](/roedunet2021/abstract/core-ideas.md)
