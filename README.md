@@ -12,3 +12,8 @@ The 20th edition of Agency ARNIEC/RoEduNet's (Romanian Education Network) annual
 > ⏱ Ends 6 Nov 2021, 14:00
 
 [Core ideas](/roedunet2021/abstract/core-ideas.md)
+
+
+## Useful information
+
+- [Overleaf template](https://www.overleaf.com/gallery/tagged/ieee-official)
