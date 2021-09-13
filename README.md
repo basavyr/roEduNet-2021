@@ -16,4 +16,8 @@ The 20th edition of Agency ARNIEC/RoEduNet's (Romanian Education Network) annual
 
 ## Useful information
 
+- [IEEE templates](https://www.ieee.org/conferences/publishing/templates.html)
+
 - [Overleaf template](https://www.overleaf.com/gallery/tagged/ieee-official)
+
+- [Main page](https://events.roedu.net/event/2/overview)
