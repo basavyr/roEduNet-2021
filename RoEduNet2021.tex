@@ -10,15 +10,17 @@
 \usepackage{xcolor}
 \usepackage{hyperref}
 
+
 \begin{document}
 
 \title{Implementation of an email-based alert system for large-scale system resources}
 
-\author{\IEEEauthorblockN{Robert Poenaru}
-\IEEEauthorblockA{\textit{Department of Computational Physics and Information Technology} \\
-\textit{\textit{Horia Hulubei} National Institute of Nuclear Physics and Engineering}\\
-Magurele, Romania \\
-robert.poenaru@protonmail.ch}
+\author{\IEEEauthorblockN{Robert Poenaru$^{1,2}$}
+\IEEEauthorblockA{
+%$^{1}$Department of Computational Physics and Information Technology\\ 
+$^{1}$\textit{Horia Hulubei} National Institute of Nuclear Physics and Engineering, Magurele, Romania\\
+$^2$Doctoral School of Physics, University of Bucharest, Romania\\
+robert.poenaru@nipne.ro}
 }
 
 \maketitle
@@ -33,7 +35,7 @@ python, system resources, alerting, email, smtp, monitoring, watchdog
 
 \section{Introduction}
 
-The computing resources within a physics department must be up to speed and ready for a continuous run-time of small-, medium-, but also large-scale simulations, in order to assure a consistent and optimal workflow for the research teams that require calculations. Usually, there is a cohesive workflow between the scientists that want to run their simulations and the system administration (sysadmins) team that provides the necessary resources for executing them. The sysadmins must check that the resources which are performing calculations behave well, but they must also take care of the computing equipment that is sitting in \emph{idle}-mode, in case new requests for allocating resources come from the scientists.
+The computing resources within a physics department must be up to speed and ready for a continuous run-time of small-, medium-, but also large-scale simulations, in order to assure a consistent and optimal workflow for the research teams that require calculations. Usually, there is a cohesive workflow between the scientists that want to run their simulations and the system administration (sysadmins) team that provides the necessary resources for executing them. The sysadmins must check that the resources which are performing calculations behave well, but they must also take care of the computing equipment that is sitting in \emph{idle}-mode, in case new requests for allocating resources are issued by scientists.
 \par However, due to the large degree of complexity of the underlying computing infrastructure, issues related to memory bandwidth, network stability, CPU throttling \cite{ibm}, cache availability \cite{awscache} and so on are highly probable, especially when the machines are running continuously. Frequent updates, unexpected network traffic, errors within the services running in the application layer \cite{pstree}.
 
 \subsection{Figures and Tables}
