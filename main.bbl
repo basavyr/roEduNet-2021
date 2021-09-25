@@ -1,0 +1,41 @@
+\begin{thebibliography}{1}
+
+\bibitem{paya2015resource}
+Ashkan Paya.
+\newblock Resource management in large-scale systems.
+\newblock {\em Department Of Computing Science Umea University}, 2015.
+
+\bibitem{codeoptimization2}
+PVS Studio.
+\newblock Code optimization, 2017.
+\newblock Last accessed 24 September 2021,
+  \texttt{https://pvs-studio.com/en/blog/terms/0084/}.
+
+\bibitem{codeoptimization1}
+Krishna Sai.
+\newblock Code optimization, 2018.
+\newblock Last accessed 24 September 2021, \texttt{https://www.techtud.com/}.
+
+\bibitem{ibm}
+IBM Corporation.
+\newblock Cpu throttling, 2012.
+\newblock Last accessed 24 September 2021,
+  \texttt{https://www.ibm.com/docs/en}.
+
+\bibitem{awscache}
+Caching challenges and strategies.
+\newblock Last accessed 24 September 2021,
+  \texttt{https://aws.amazon.com/builders-library/}.
+
+\bibitem{pstree}
+Pstree - linux man page.
+\newblock Last accessed 24 September 2021,
+  \texttt{https://linux.die.net/man/1/pstree}.
+
+\bibitem{jobqeue}
+IBM Corporation.
+\newblock Job queues, 2015.
+\newblock Last accessed 24 September 2021,
+  \texttt{https://www.ibm.com/docs/en}.
+
+\end{thebibliography}

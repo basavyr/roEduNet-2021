@@ -2,4 +2,8 @@ pdflatex main
 bibtex main
 pdflatex main
 pdflatex main
-open main.pdf
+rm main.log
+rm main.pdf
+rm main.aux
+rm main.blg
+rm main.out
