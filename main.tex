@@ -128,6 +128,7 @@ With the obtained average values for each stat (e.g, CPU usage, RAM usage), that
 \end{lstlisting}
 
 In the example shown in Listing \ref{thresholds}, both the CPU and the RAM usage upper limit were set to 75, meaning that if within a \texttt{cycle\_time}, any monitored node that exceeds these limits (e.g., the CPU usage or RAM usage - or both - are higher than $75\%$)  will raise the \emph{unusual behavior}. Obviously, if the conditions for exceeding the upper limit are not met, the computer nodes are considered to behave as expected (normal behavior).
+\par As Fig. \ref{fig-operation-mode} shows, this is the crucial step in deciding whether the alert via e-mail stage should be called or not. Under normal behavior of the monitored nodes, after each \texttt{cycle\_time} the arrays are cleared, and the watcher module continues to read new log entries.
 
 \section{Alert via email}
 \label{section-email-alert}
