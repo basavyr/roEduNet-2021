@@ -84,6 +84,10 @@ Implementation of the alert system is quite straightforward, following a procedu
 \section{Watchdog - Data ingest}
 \label{section-data-ingest}
 
+It was already mentioned that one can consider the underlying computing infrastructure as being composed of two types of resources: 1) the computing nodes that execute jobs (i.e., numerical simulations) and 2) the idling resources (i.e., nodes that wait for additional jobs picked-up by the resource management tool and allocated on the job pool by the sysadmins).
+\par Both resource groups are required to send information related to their current status to the alert system. When dealing with large-scale systems, each node on the cluster must send its corresponding system stats, usually under the form of a log file. An easy way of assuring that all the nodes send their information to a centralized "master node" is by using a so-called \emph{log shipper}. One great example is the Filebeat \cite{filebeat} service, which collects system information and ships it as a log file via the network to any client. In fact, in a previous research \cite{poenaru-elk}, an implementation that is able to deliver logs via Filebeat was tested for multiple machines. The "master node" consists in a central machine that collects all the logs coming from the entire computing infrastructure, with each log file usually updating very often. The alert service is also deployed on the master node (so far it was tested as a python script that is running in the background, as a process).
+\par With all the logs from each computing node saved in a centralized location, the \emph{python watcher} - part of Stage 1 - can monitor those files continuously. In the current testing procedures, new log data arrived (on average) each 2-3 seconds. Since the log files are constantly changed and overwritten by newly ingested data, it is required that the files must be read again and again by the python service. This is done via the \texttt{watchdog} package.
+
 \section{Thresholds - normal vs. unusual behavior}
 \label{section-thresholds}
 
