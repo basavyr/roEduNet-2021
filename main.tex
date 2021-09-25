@@ -132,7 +132,7 @@ In the example shown in Listing \ref{thresholds}, both the CPU and the RAM usage
 \section{Alert via email}
 \label{section-email-alert}
 
-The last step in the implementation is the actual alert itself, which is informing the sysadmins with regards to some detected unusual behavior, and this is done by e-mail to a list of clients (each client represents a member of the sysadmin team and it requires a valid e-mail address). As already mentioned in the beginning of Section \ref{section-alert-workflow}, the choice of an e-mail based alert system was simply because of reliability and convenience (no extra apps or web services required).
+The last step in the implementation is the actual alert itself, which is informing the sysadmins with regards to some detected unusual behavior, and this is done by e-mail to a list of clients (each client represents a member of the sysadmin team and it requires a valid e-mail address). As already mentioned at the beginning of Section \ref{section-alert-workflow}, the choice of an e-mail based alert system was simply because of reliability and convenience (no extra apps or web services required).
 \par In terms of required packages, the following python modules are used \cite{emails}:
 \begin{itemize}
     \item \texttt{smtplib}
@@ -142,9 +142,9 @@ The last step in the implementation is the actual alert itself, which is informi
     \item \texttt{email.mime.text.MIMEMultipart}
 \end{itemize}
 
-The built-in python module \texttt{smtplib} \cite{smtplib} allows one to send e-mails using the well-known SMTP protocol (Simple Mail Transfer Protocol). The module uses the standard protocol that was developed a long time ago by \cite{postel1982rfc0821}.
-\par It is worth mentioning certain characteristics of the current approach. The e-mails are sent through a Gmail Account that was created for \emph{Development}, turning on the feature \emph{Less secure app access} \cite{less-secure}. This way, the implemented algorithm can send e-mails securely to a list of clients.
-\par In the code-base shown in Listing \ref{message-header}, the address that is used for sending alerts is configured, together with the list of clients that should receive the alert, and a subject.
+The built-in Python module \texttt{smtplib} \cite{smtplib} allows one to send e-mails using the well-known SMTP protocol (Simple Mail Transfer Protocol). The module uses the standard protocol that was developed a long time ago by \cite{postel1982rfc0821}.
+\par It is worth mentioning certain characteristics of the current approach. The e-mails are sent through a Gmail account that was created for \emph{Development}, turning on the feature \emph{Less secure app access} \cite{less-secure}. This way, the implemented algorithm can send e-mails securely to a list of clients.
+\par In the code-base shown in Listing \ref{message-header}, the address that is used for sending alerts is configured, together with the list of clients that should receive the alert and a subject.
 
 \begin{lstlisting}[language=Python, caption={Setting up the e-mail headers, such as the destination and subject.},basicstyle=\footnotesize,label={message-header}]
  message = MIMEMultipart()
@@ -156,7 +156,7 @@ The built-in python module \texttt{smtplib} \cite{smtplib} allows one to send e-
             - Alert via DFCTI Monitoring System'
 \end{lstlisting}
 
-With the subject properly configured, the next step is to create the attachments that will be added in the final message. The attachments consist of graphical representations (done with the \texttt{matplotlib} package \cite{hunter2007matplotlib}) with the system resources which raised unusual behavior (in Listing \ref{create-email} it is denoted by \text{part2}). For example, if one of the nodes has an unusually large CPU usage, then a plot with the CPU usage within the last \texttt{cycle\_time} time-interval is plotted and compared with the threshold. Another attachment is a file that contains all the numerical data with the recorded logs (within the code-base shown in Listing \ref{create-email} it is the "dat" file denoted by the variable \texttt{part1}).
+With the subject properly configured, the next step is to create the attachments that will be added to the final message. The attachments consist of graphical representations (done with the \texttt{matplotlib} package \cite{hunter2007matplotlib}) with the system resources which raised unusual behavior (in Listing \ref{create-email} it is denoted by \text{part2}). For example, if one of the nodes has an unusually large CPU usage, then a plot with the CPU usage within the last \texttt{cycle\_time} time-interval is plotted and compared with the threshold. Another attachment is a file that contains all the numerical data with the recorded logs (within the code-base shown in Listing \ref{create-email} it is the "dat" file denoted by the variable \texttt{part1}).
 
 \begin{lstlisting}[language=Python, caption={Create attachments and save them securely by encoding them and embed them as string objects within the final object.},basicstyle=\footnotesize,label={create-email}]
 # Adding the body to the actual email
@@ -196,7 +196,7 @@ message.attach(part2)
 final_alert = message.as_string()
 \end{lstlisting}
 
-With the alert message properly constructed, the last step is to send it securely to the client list. This is done by opening an \texttt{ssl} connection. The code example skeched in Listing \ref{ssl-email} creates a secure connection with Gmail’s SMTP server, using the \texttt{SMTP\_SSL()} of \texttt{smtplib} to initiate a TLS-encrypted connection \cite{emails}. The default context of \texttt{ssl} validates the host name and its certificates and optimizes the security of the connection.
+With the alert message properly constructed, the last step is to send it securely to the client list. This is done by opening an \texttt{ssl} connection. The code example sketched in Listing \ref{ssl-email} creates a secure connection with Gmail’s SMTP server, using the \texttt{SMTP\_SSL()} of \texttt{smtplib} to initiate a TLS-encrypted connection \cite{emails}. The default context of \texttt{ssl} validates the hostname and its certificates and optimizes the security of the connection.
 
 \begin{lstlisting}[language=Python, caption={Procedure for sending the e-mail securely, through \textit{ssl}. The dotted code-base marks some debug steps that are irrelevant to the current discussion.},basicstyle=\footnotesize,label={ssl-email}]
 CONTEXT = ssl.create_default_context()
