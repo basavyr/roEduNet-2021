@@ -103,8 +103,13 @@ It was already mentioned that one can consider the underlying computing infrastr
     observer.join()
 \end{lstlisting}
 
+In the current implementation, the watchdog module is monitoring a set of log files in which content is written constantly, then with the help of so-called \texttt{Reader} class, the incoming log data is parsed and stored in memory as arrays (the arrays are cleared every once in a while to avoid any memory overhead).
+
 \section{Thresholds - normal vs. unusual behavior}
 \label{section-thresholds}
+
+With the arrays generated in Stage-1, it is possible to go into Stage-2, where some numerical analysis is performed on the collected data. This is a crucial step, since it involves taking the decision if any of the incoming stats for a particular computing node is expecting normally or not.
+\par The decision between normal vs. expected behavior on a system stat is taken by comparing its averaged value over a fixed period of time. The fixed period of time is configured within Stage-0 (i.e., the \texttt{cycle time}).
 
 \section{Alert via email}
 \label{section-email-alert}
