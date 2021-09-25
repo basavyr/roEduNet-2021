@@ -26,3 +26,4 @@ echo '*********************'
 echo 'Script finished executing...'
 echo '*********************'
 echo '😊'
+open main.pdf
