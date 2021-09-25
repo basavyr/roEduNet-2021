@@ -65,6 +65,11 @@ Amira~B Sallow, Hivi~Ismat Dino, Zainab~Salih Ageed, Mayyadah~R Mahmood, and
   implementation.
 \newblock {\em Int. J. Multidiscip. Res. Publ}, 3(2):7, 2020.
 
+\bibitem{python3}
+Guido Van~Rossum and Fred~L. Drake.
+\newblock {\em Python 3 Reference Manual}.
+\newblock CreateSpace, Scotts Valley, CA, 2009.
+
 \bibitem{blem2013power}
 Emily Blem, Jaikrishnan Menon, and Karthikeyan Sankaralingam.
 \newblock Power struggles: Revisiting the risc vs. cisc debate on contemporary
@@ -75,5 +80,62 @@ Emily Blem, Jaikrishnan Menon, and Karthikeyan Sankaralingam.
 \bibitem{postel1982rfc0821}
 Jonathan Postel.
 \newblock Rfc0821: Simple mail transfer protocol, 1982.
+
+\bibitem{filebeat}
+Filebeat quick start.
+\newblock Filebeat overview.
+\newblock Last accessed 24 September 2021,
+  \texttt{https://www.elastic.co/guide/en/beats/}.
+
+\bibitem{poenaru-elk}
+Robert Poenaru and Dragos Ciobanu-Zabet.
+\newblock Elk stack – improving the computing clusters at dfcti through log
+  analysis.
+\newblock In {\em 2020 19th RoEduNet Conference: Networking in Education and
+  Research (RoEduNet)}, pages 1--8, 2020.
+
+\bibitem{watchdog}
+Watchdog.
+\newblock Last accessed 24 September 2021,
+  \texttt{https://www.elastic.co/guide/en/beats/}.
+
+\bibitem{emails}
+Joska de~Langen.
+\newblock Sending emails with python.
+\newblock Last accessed 24 September 2021,
+  \texttt{https://realpython.com/python-send-email}.
+
+\bibitem{smtplib}
+smtplib — smtp protocol client.
+\newblock Last accessed 24 September 2021,
+  \texttt{https://docs.python.org/3/library/smtplib}.
+
+\bibitem{less-secure}
+Less secure app access.
+\newblock Last accessed 24 September 2021,
+  \texttt{https://myaccount.google.com/lesssecureapps}.
+
+\bibitem{hunter2007matplotlib}
+John~D Hunter.
+\newblock Matplotlib: A 2d graphics environment.
+\newblock {\em Computing in science \& engineering}, 9(3):90--95, 2007.
+
+\bibitem{merkel2014docker}
+Dirk Merkel.
+\newblock Docker: lightweight linux containers for consistent development and
+  deployment.
+\newblock {\em Linux journal}, 2014(239):2, 2014.
+
+\bibitem{brewer2015kubernetes}
+Eric~A Brewer.
+\newblock Kubernetes and the path to cloud native.
+\newblock In {\em Proceedings of the sixth ACM symposium on cloud computing},
+  pages 167--167, 2015.
+
+\bibitem{github-codebase}
+Robert Poenaru.
+\newblock Kibana log alerts.
+\newblock Last accessed 24 September 2021,
+  \texttt{https://github.com/basavyr/kibana-log-alerts}.
 
 \end{thebibliography}
