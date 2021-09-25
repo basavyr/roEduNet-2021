@@ -221,10 +221,26 @@ with smtplib.SMTP_SSL("smtp.gmail.com",
         ...
 \end{lstlisting}
 
-With the code-base complete (Listings \ref{message-header}-\ref{create-email}-\ref{ssl-email}), in case of any unexpected behavior detected within the monitoring process, alerts will be constantly sent to the sysadmin team. Examples of e-mails that can be received are shown in Figs.
+With the code-base complete (Listings \ref{message-header}-\ref{create-email}-\ref{ssl-email}), in case of any unexpected behavior detected within the monitoring process, alerts will be constantly sent to the sysadmin team. Examples of e-mails that can be received are shown in Fig. \ref{emails-pics}. Fig. \ref{cpu-ss} shows the plot with the CPU usage for a node that has unexpected behavior.
+
+\begin{figure*}[htbp]
+    \centering
+    \includegraphics[scale=0.4]{figs/example_usecase_ram.png}
+    \caption{Example of an alert that is sent when RAM usage behaves in an unusual manner. The two attachments can also be seen in the bottom of the screenshot}
+    \label{emails-pics}
+\end{figure*}
+
+\begin{figure*}[htbp]
+    \centering
+    \includegraphics[scale=0.6]{figs/cpu_usage.pdf}
+    \caption{The plot file within the attachments for an alert which informs the sysadmins on high CPU usage of a particular node (the unique \texttt{machine-id} corresponds to that node).}
+    \label{cpu-ss}
+\end{figure*}
 
 \section{Conclusions \& Future Work}
 \label{section-conclusions}
+
+In this work, a description of the development process for an alert system was made. The alert system consisted of several stages of procedures.
 
 % \subsection{Figures and Tables}
 % \paragraph{Positioning Figures and Tables} Place figures and tables at the top and 
