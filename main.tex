@@ -240,7 +240,8 @@ With the code-base complete (Listings \ref{message-header}-\ref{create-email}-\r
 \section{Conclusions \& Future Work}
 \label{section-conclusions}
 
-In this work, a description of the development process for an alert system was made. The alert system consisted of several stages of procedures.
+In this work, a description of the development process for an alert system was made. The importance of a system administration team that assures efficient resource management was illustrated in the beginning. The alert system consisted of several stages of procedures that were incorporated in a general workflow which basically performed the constant monitoring of a set of log files, then perform numerical analysis on the parsed log data, compare each system stat with the configured thresholds, decide on the normal/unusual behavior of each compute resource within the infrastructure, and then finally, create an automated e-mail message containing i) detailed text with the detected "anomaly" and ii) attachment files with graphical representations and tabulated data.
+\par The current code-base used only open-source modules developed excursively in Python, assuring in this way a great degree of compatibility with most system architectures, operating systems and environment type (i.e., bare-bone, virtualized). Moreover, the scalability of Python allows the current implementation to be deployed on large-scale clusters even through containerized approaches (i.e., Docker \cite{merkel2014docker}, K8s \cite{brewer2015kubernetes}). In fact, this is a major next step in the development process of the project.
 
 % \subsection{Figures and Tables}
 % \paragraph{Positioning Figures and Tables} Place figures and tables at the top and 
