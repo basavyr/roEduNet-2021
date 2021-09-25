@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{paya2015resource}
 Ashkan Paya.
@@ -50,5 +50,30 @@ Chia-Yu Lin, Tzu-Ting Chen, Li-Chun Wang, and Hong-Han Shuai.
   in machine tools.
 \newblock {\em The 4th International Workshop on Artificial Intelligence of
   Things}, 2020.
+
+\bibitem{ciotti2020covid}
+Marco Ciotti, Massimo Ciccozzi, Alessandro Terrinoni, Wen-Can Jiang, Cheng-Bin
+  Wang, and Sergio Bernardini.
+\newblock The covid-19 pandemic.
+\newblock {\em Critical reviews in clinical laboratory sciences},
+  57(6):365--388, 2020.
+
+\bibitem{sallow2020client}
+Amira~B Sallow, Hivi~Ismat Dino, Zainab~Salih Ageed, Mayyadah~R Mahmood, and
+  Maiwan~B Abdulrazaq.
+\newblock Client/server remote control administration system: Design and
+  implementation.
+\newblock {\em Int. J. Multidiscip. Res. Publ}, 3(2):7, 2020.
+
+\bibitem{blem2013power}
+Emily Blem, Jaikrishnan Menon, and Karthikeyan Sankaralingam.
+\newblock Power struggles: Revisiting the risc vs. cisc debate on contemporary
+  arm and x86 architectures.
+\newblock In {\em 2013 IEEE 19th International Symposium on High Performance
+  Computer Architecture (HPCA)}, pages 1--12. IEEE, 2013.
+
+\bibitem{postel1982rfc0821}
+Jonathan Postel.
+\newblock Rfc0821: Simple mail transfer protocol, 1982.
 
 \end{thebibliography}
