@@ -38,4 +38,17 @@ IBM Corporation.
 \newblock Last accessed 24 September 2021,
   \texttt{https://www.ibm.com/docs/en}.
 
+\bibitem{hasani2019machine}
+Ramin Hasani, Guodong Wang, and Radu Grosu.
+\newblock A machine learning suite for machine components’ health-monitoring.
+\newblock In {\em Proceedings of the AAAI Conference on Artificial
+  Intelligence}, volume~33, 2019.
+
+\bibitem{lin2020health}
+Chia-Yu Lin, Tzu-Ting Chen, Li-Chun Wang, and Hong-Han Shuai.
+\newblock Health-based fault generative adversarial network for fault diagnosis
+  in machine tools.
+\newblock {\em The 4th International Workshop on Artificial Intelligence of
+  Things}, 2020.
+
 \end{thebibliography}
