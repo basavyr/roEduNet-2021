@@ -9,6 +9,7 @@
 \usepackage{textcomp}
 \usepackage{xcolor}
 \usepackage{hyperref}
+\usepackage{listings}
 
 
 \begin{document}
@@ -86,7 +87,21 @@ Implementation of the alert system is quite straightforward, following a procedu
 
 It was already mentioned that one can consider the underlying computing infrastructure as being composed of two types of resources: 1) the computing nodes that execute jobs (i.e., numerical simulations) and 2) the idling resources (i.e., nodes that wait for additional jobs picked-up by the resource management tool and allocated on the job pool by the sysadmins).
 \par Both resource groups are required to send information related to their current status to the alert system. When dealing with large-scale systems, each node on the cluster must send its corresponding system stats, usually under the form of a log file. An easy way of assuring that all the nodes send their information to a centralized "master node" is by using a so-called \emph{log shipper}. One great example is the Filebeat \cite{filebeat} service, which collects system information and ships it as a log file via the network to any client. In fact, in a previous research \cite{poenaru-elk}, an implementation that is able to deliver logs via Filebeat was tested for multiple machines. The "master node" consists in a central machine that collects all the logs coming from the entire computing infrastructure, with each log file usually updating very often. The alert service is also deployed on the master node (so far it was tested as a python script that is running in the background, as a process).
-\par With all the logs from each computing node saved in a centralized location, the \emph{python watcher} - part of Stage 1 - can monitor those files continuously. In the current testing procedures, new log data arrived (on average) each 2-3 seconds. Since the log files are constantly changed and overwritten by newly ingested data, it is required that the files must be read again and again by the python service. This is done via the \texttt{watchdog} package \cite{watchdog}. This package takes a list of log files, it creates a set of \emph{file system handlers} and then it starts to "watch" every file within the list as a new \emph{event} arrives within any of the files. An event is represented by a trigger of the type \texttt{file\_modified}, meaning that once a file has some new content in it, its state is modified, and as such, the file event handler returns the new modified state. By default, the class that must be called in order to check if the state of the file is modified or not is called \texttt{Observer}.
+\par With all the logs from each computing node saved in a centralized location, the \emph{python watcher} - part of Stage 1 - can monitor those files continuously. In the current testing procedures, new log data arrived (on average) each 2-3 seconds. Since the log files are constantly changed and overwritten by newly ingested data, it is required that the files must be read again and again by the python service. This is done via the \texttt{watchdog} package \cite{watchdog}. With the help of this python module, one can take a list of log files, create a set of \emph{file system handlers} wrapped into an \texttt{Observer} class, and then the implementation starts to "watch" every file within the list, keeping track of every new \emph{event} that arrives within any of the files. An event is represented by a trigger of the type \texttt{file\_modified}, meaning that once a file has some new content in it, its state is modified, and as such, the file event handler returns the new modified state. By default, the \texttt{Observer} class comes with some predefined methods that must be used within the alert system. \texttt{start()} is called before all other steps within the multi-stage pipeline. The methods \texttt{stop()} and \texttt{join()} are used once there are no other log entries arriving in the corresponding paths (signaling that there could be issues with the connection, or the Filebeat service failed within the computing cluster). Listing \ref{watchdog-code} shows a basic example of a method that checks for new events in a file, as long as no keyboard keys are pressed.
+
+\begin{lstlisting}[language=Python, caption=A straightforward example of using the watchdog module to track a file for any changes.,basicstyle=\footnotesize,label={watchdog-code}]
+ event_handler = LoggingEventHandler()
+    observer = Observer()
+    observer.schedule(event_handler, path, 
+                            recursive=True)
+    observer.start()
+    try:
+        while True:
+            time.sleep(1)
+    except KeyboardInterrupt:
+        observer.stop()
+    observer.join()
+\end{lstlisting}
 
 \section{Thresholds - normal vs. unusual behavior}
 \label{section-thresholds}
