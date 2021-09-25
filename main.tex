@@ -133,6 +133,18 @@ In the example shown in Listing \ref{thresholds}, both the CPU and the RAM usage
 \section{Alert via email}
 \label{section-email-alert}
 
+The last step in the implementation is the actual alert itself, which is informing the sysadmins with regards to some detected unusual behavior, and this is done by e-mail to a list of clients (each client represents a member of the sysadmin team and it requires a valid e-mail address). As already mentioned in the beginning of Section \ref{section-alert-workflow}, the choice of an e-mail based alert system was simply because of reliability and convenience (no extra apps or web services required).
+\par In terms of required packages, the following python modules are used \cite{emails}:
+\begin{itemize}
+    \item \texttt{smtplib}
+    \item \texttt{ssl}
+    \item \texttt{email.mime.base.MIMEBase}
+    \item \texttt{email.mime.text.MIMEText}
+    \item \texttt{email.mime.text.MIMEMultipart}
+\end{itemize}
+
+The built-in python module \texttt{smtplib} allows one to send e-mails using the well-known SMTP protocal (Simple Mail Transfer Protocol). The module uses the standard protocol that was developed a long time ago by \cite{postel1982rfc0821}.
+
 \section{Conclusions \& Future Work}
 \label{section-conclusions}
 
