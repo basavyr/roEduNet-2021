@@ -18,6 +18,8 @@ rm main.log
 rm main.aux
 rm main.blg
 rm main.out
+rm main.fdb_latexmk
+rm main.fls
 echo ''
 echo '*********************'
 echo 'Script finished executing...'
