@@ -14,12 +14,13 @@ echo ''
 echo '*********************'
 echo 'Removing extra files...'
 echo '*********************'
-rm main.log
-rm main.aux
-rm main.blg
-rm main.out
-rm main.fdb_latexmk
-rm main.fls
+rm *.log
+rm *.aux
+rm *.blg
+rm *.out
+rm *.fdb_latexmk
+rm *.fls
+rm *.synctex.gz
 echo ''
 echo '*********************'
 echo 'Script finished executing...'
