@@ -54,7 +54,16 @@ The computing resources within a physics department must be up to speed and read
 \section{Alert-System Workflow}
 \label{section-alert-workflow}
 
-Implementation of the alert system is quite straightforward, following a procedure that does not require too much information. Fig. \ref{alert-system-general-workflow} shows how the process of taking action (i.e., fixing occurring issues on the computing nodes) by the administration team is taking place. Usually, the personnel that deals with system administration is located on-site, since the need-of-action would sometimes require physical access on the barebone servers. However, considering the current pandemic situation \cite{ciotti2020covid}, the paradigm has shifted a lot to remote work, with possibility of remote access by the sysadmins \cite{sallow2020client} to any computing cluster located in the departments they monitor. 
+Implementation of the alert system is quite straightforward, following a procedure that does not require too much information. Fig. \ref{alert-system-general-workflow} shows how the process of taking action (i.e., fixing occurring issues on the computing nodes) by the administration team is taking place. Usually, the personnel that deals with system administration is located on-site, since the need-of-action would sometimes require physical access on the barebone servers. However, considering the current pandemic situation \cite{ciotti2020covid}, the paradigm has shifted a lot to remote work, with possibility of remote access by the sysadmins \cite{sallow2020client} to any computing cluster located in the departments they monitor. As a result, the alert system will eventually inform both groups, and depending on the type of issue encountered, actions will be made by one or the other (or even both).
+\par The reason behind choosing \emph{Python} as the development tool here lies in its overall great compatibility with different operating systems, consistency between different system architectures (e.g., x86, ARM, \cite{blem2013power}), well-documented resources, robust packages that allow the implementation of all the required instructions in a secure and reliable way.
+\par Between the monitoring phase and the alert + action phases, the current approach involves three major stages:
+
+\begin{description}
+    \item[\emph{Step 0 - Service configuration}] $\\$ This is done before the alert system is turned on, by setting some parameters to the desired values. The sysadmin team must decide on their values, depending on the required regime of execution.
+     \item[\emph{Data ingest}] $\\$ This is the first step, in which the implemented service is extracting the data coming from the computing resources. These data contain information with regards to the state of each resource, status of all the running processes and so one. They usually come in form of \emph{log files}.
+     \item[\emph{Log analysis}] $\\$ x.
+     \item[\emph{Data ingest}] $\\$ x.
+\end{description}
 
 \begin{figure*}[htbp]
     \centering
