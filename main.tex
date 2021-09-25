@@ -107,8 +107,8 @@ In the current implementation, the watchdog module is monitoring a set of log fi
 \section{Thresholds - normal vs. unusual behavior}
 \label{section-thresholds}
 
-With the arrays generated in Stage-1, it is possible to go into Stage-2, where some numerical analysis is performed on the collected data. This is a crucial step, since it involves taking the decision if any of the incoming stats for a particular computing node is expecting normally or not.
-\par The decision between normal vs. expected behavior on a system stat is taken by comparing its averaged value over a fixed period of time. The fixed period of time is configured within Stage-0 (i.e., the \texttt{cycle\_time}) by the user (sysadmin). Then, within a \texttt{cycle\_time}, every new log data that arrives at the master node is collected by the watcher (via the \texttt{Observer()} and its file event handler), added in its corresponding array (denoted by "stack" within the code-base). After a \texttt{cycle\_time} has passed, the filled arrays (stacks) are analyzed. As an example, for the CPU usage and RAM usage, the corresponding functions that perform numerical analysis are defined below (see Listing \ref{analyse-code}). Due to the space constraints of the current paper, further examples will only focus on the CPU usage and the RAM (memory) usage within the system resources.
+With the arrays generated in Stage-1, it is possible to go into Stage-2, where some numerical analysis is performed on the collected data. This is a crucial step since it involves deciding if any of the incoming stats for a particular computing node is expecting normally or not.
+\par The decision between normal vs. expected behavior on a system stat is taken by comparing its averaged value over a fixed period of time. The fixed period is configured within Stage-0 (i.e., the \texttt{cycle\_time}) by the user (sysadmin). Then, within a \texttt{cycle\_time}, every new log data that arrives at the master node is collected by the watcher (via the \texttt{Observer()} and its file event handler), added in its corresponding array (denoted by "stack" within the code-base). After a \texttt{cycle\_time} has passed, the filled arrays (stacks) are analyzed. As an example, for the CPU usage and RAM usage, the corresponding functions that perform numerical analysis are defined below (see Listing \ref{analyse-code}). Due to the space constraints of the current paper, further examples will only focus on the CPU usage and the RAM (memory) usage within the system resources.
 
 \begin{lstlisting}[language=Python, caption=The methods for calculating averaged stats values used within the project code-base.,basicstyle=\footnotesize,label={analyse-code}]
 @classmethod
@@ -119,7 +119,7 @@ With the arrays generated in Stage-1, it is possible to go into Stage-2, where s
                 mem_usage_stack, mem_threshold):
 \end{lstlisting}
 
-With the obtained average values for each stat (e.g, CPU usage, RAM usage), that next step is to compare them with the \texttt{thresholds}. Within the code-base, they are declared as a dictionary (see Listing \ref{thresholds}).
+With the obtained average values for each stat (e.g, CPU usage, RAM usage), the next step is to compare them with the \texttt{thresholds}. Within the code-base, they are declared as a dictionary (see Listing \ref{thresholds}).
 
 \begin{lstlisting}[language=Python, caption=Declaration of some thresholds within the code-base.,basicstyle=\footnotesize,label={thresholds}]
     thresholds = {"cpu": 75,
