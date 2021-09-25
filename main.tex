@@ -143,7 +143,8 @@ The last step in the implementation is the actual alert itself, which is informi
     \item \texttt{email.mime.text.MIMEMultipart}
 \end{itemize}
 
-The built-in python module \texttt{smtplib} allows one to send e-mails using the well-known SMTP protocal (Simple Mail Transfer Protocol). The module uses the standard protocol that was developed a long time ago by \cite{postel1982rfc0821}.
+The built-in python module \texttt{smtplib} \cite{smtplib} allows one to send e-mails using the well-known SMTP protocol (Simple Mail Transfer Protocol). The module uses the standard protocol that was developed a long time ago by \cite{postel1982rfc0821}.
+\par It is worth mentioning certain characteristics of the current approach. The e-mails are sent through a Gmail Account that was created for \emph{Development}, turning on the feature \emph{Less secure app access} \cite{less-secure}. This way, the implemented algorithm can send e-mails securely to a list of clients.
 
 \section{Conclusions \& Future Work}
 \label{section-conclusions}
