@@ -6,3 +6,4 @@
 *.fls
 *.synctex.gz
 Resources/.DS_Store
+.DS_Store
