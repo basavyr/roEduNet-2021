@@ -64,22 +64,22 @@ Implementation of the alert system is quite straightforward, following a procedu
      \item[Stage-3 - \emph{Alerts}] $\\$ If the monitored resources show that indeed their behavior is unusual (considering any of the controlled stats), the python implementation will trigger a so-called \emph{alert}: a chain of procedures that follow the set of parameters defined in \emph{Step0} which will inform sysadmins with regards to the encountered issue. The process of informing the sysadmin teams is done via email \cite{postel1982rfc0821}. Its ease-of-use and ease-of-access allow the members to quickly and efficiently be informed, since the e-mail clients can run on pretty much any device (from a personal computer to a laptop, tablet, and smartphone), becoming a great solution in the current work.
 \end{description}
  
-\begin{figure*}[htbp]
+\begin{figure}[htbp]
     \centering
-    \includegraphics[scale=1.1]{figs/alert_system_improvements.pdf}
+    \includegraphics[scale=0.9]{figs/alert_system_improvements_v2.pdf}
     \caption{The general workflow of a system administration team, when an alert system would be deployed on the computing resources that need to be monitored.}
     \label{alert-system-general-workflow}
-\end{figure*}
+\end{figure}
 
 \par Now that the core stages of the implementation were sketched (see also Fig. \ref{fig-operation-mode} for a graphical representation that encapsulates its features), it is instructive to describe each stage in particular, with its main goals and characteristics.
 
-\begin{figure*}[htbp]
+\begin{figure}[htbp]
     \centering
-    \includegraphics[width=1.0\textwidth]{figs/alert_system_operation_mode.pdf}
-    % \includegraphics[scale=0.7]{figs/alert_system_operation_mode.pdf}
+    % \includegraphics[width=1.0\textwidth]{figs/alert_system_operation_mode.pdf}
+    \includegraphics[scale=0.2]{figs/alert_system_operation_mode.pdf}
     \caption{Complete overview of the 3-stage operation mode of the alert implementation. Details on the marked variables are describe throughout the paper.}
     \label{fig-operation-mode}
-\end{figure*}
+\end{figure}
 
 \section{Watchdog - Data ingest}
 \label{section-data-ingest}
