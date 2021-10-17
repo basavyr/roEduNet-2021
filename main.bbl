@@ -132,10 +132,4 @@ Eric~A Brewer.
 \newblock In {\em Proceedings of the sixth ACM symposium on cloud computing},
   pages 167--167, 2015.
 
-\bibitem{github-codebase}
-Robert Poenaru.
-\newblock Kibana log alerts.
-\newblock Last accessed 24 September 2021,
-  \texttt{https://github.com/basavyr/kibana-log-alerts}.
-
 \end{thebibliography}
