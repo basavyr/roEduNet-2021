@@ -23,3 +23,5 @@
 21. Page 5: *...it is the "dat" file* -> **the \texttt{.dat} file**
 22. Page 5: *...using the SMTP_SLL() of smtplib to initiate...* -> **SMTP_SSL() function** , **smtplib module**
 23. Page 5: *With the code-base now complete...*
+24. Page 6: *...developed excursively* -> **exclusively**
+25. Page 6: *process of the project* -> **of the service**
