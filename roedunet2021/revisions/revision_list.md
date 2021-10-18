@@ -9,4 +9,12 @@
 7. Page 2: defined in Step0* -> **Step-0**
 8. Figure 2: re-do figure: i) delete abbreviations for "res"
 9. Figure 3: re-do figure: i) change Stage0 to "Step-0" ii) **i.e., the cycle time)** iii) Change the arrows with proper cycle suggestions
-10. 
+10. Page 4: *again and again* -> **continuously**
+11. Page 4: *by the python service* -> **by the python watcher service**
+12. Page 4: **The method start() is called...**
+13. Page 4: *Filebeat service failed within the computing cluster* -> **stopped running**
+14. Page 4: *...computing node is expecting normally...* -> **behaving**
+15. Page 4: *normal vs. expected behavior* -> **normal vs. unusual behavior**
+16. Page 4: *the Observer() and its file...* -> **the Observer() class**
+17. Page 4: *..., added in its corresponding* -> **, and added in its...**
+18. 
