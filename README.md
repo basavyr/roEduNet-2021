@@ -21,3 +21,7 @@ The 20th edition of Agency ARNIEC/RoEduNet's (Romanian Education Network) annual
 - [Overleaf template](https://www.overleaf.com/gallery/tagged/ieee-official)
 
 - [Main page](https://events.roedu.net/event/2/overview)
+
+## Final presentation
+
+[🎥 Presentation](roedunet2021/presentation/roEduNet_2021.pdf)
